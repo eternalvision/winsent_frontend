@@ -1,4 +1,4 @@
 export { Services } from "./Services";
-export { Languages } from "./Languages";
-export { Themes } from "./Themes";
+export { LanguageSwitcher } from "./LanguageSwitcher";
+export { ThemeSwitcher } from "./ThemeSwitcher";
 export { Authorization } from "./Authorization";

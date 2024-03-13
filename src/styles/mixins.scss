@@ -1,0 +1,7 @@
+@mixin non-scrolbar {
+    &::-webkit-scrollbar {
+        display: none !important;
+    }
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
+}

@@ -1,29 +1,54 @@
 import { useContext } from "react";
-import { Theme } from "@radix-ui/themes";
+import { Theme, ThemePanel, ScrollArea } from "@radix-ui/themes";
 import { Header } from "./components";
+import { Business } from "./pages";
 import { AnimatePresence } from "framer-motion";
 import { DarkModeContext, LanguageContext } from "./context";
+import { Route, Routes, Navigate, useLocation } from "react-router-dom";
 import * as UI from "./ui";
 
 export const App = () => {
     const themeContext = useContext(DarkModeContext);
     const languageContext = useContext(LanguageContext);
+    const location = useLocation();
 
     return (
         <Theme
             appearance={themeContext.theme}
             accentColor="indigo"
-            grayColor="mauve"
-            panelBackground="solid"
-            radius="large"
+            grayColor="slate"
+            radius="medium"
             scaling="110%">
-            <AnimatePresence>
-                <Header
-                    {...UI}
-                    themeContext={themeContext}
-                    languageContext={languageContext}
-                />
-            </AnimatePresence>
+            {/* <ThemePanel /> */}
+            <ScrollArea
+                radius="full"
+                size="3"
+                type="always"
+                scrollbars="vertical">
+                <AnimatePresence>
+                    <header className="Header">
+                        <Header
+                            {...UI}
+                            themeContext={themeContext}
+                            languageContext={languageContext}
+                        />
+                    </header>
+                </AnimatePresence>
+                <main className="Main">
+                    <AnimatePresence mode="wait">
+                        <Routes location={location} key={location.pathname}>
+                            <Route
+                                path="/business"
+                                element={<Business {...UI} />}
+                            />
+                            <Route
+                                path="*"
+                                element={<Navigate to={"/business"} />}
+                            />
+                        </Routes>
+                    </AnimatePresence>
+                </main>
+            </ScrollArea>
         </Theme>
     );
 };

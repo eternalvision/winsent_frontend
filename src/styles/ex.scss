@@ -1,0 +1,15 @@
+.block {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+    background-image: radial-gradient(rgba(0, 0, 0, 0) 1px, #fdfdfd 1px);
+    background-size: 4px 4px;
+    backdrop-filter: blur(3px);
+    font-size: 14px;
+    line-height: 14px;
+}

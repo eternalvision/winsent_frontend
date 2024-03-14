@@ -1,0 +1,54 @@
+.TitleBlock {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0px 0px var(--radius-5) var(--radius-5);
+    border: 3px solid var(--cyan-2);
+    margin-top: -3px;
+    max-height: 696px;
+    &::before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: linear-gradient(
+            -0.25turn,
+            transparent,
+            var(--color-page-background),
+            var(--color-page-background)
+        );
+    }
+}
+
+.TitleImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transform: translateX(40%);
+    position: relative;
+    z-index: 0;
+}
+
+.TitleBoxFlex {
+    max-width: 40%;
+    height: 100%;
+}
+
+.TitleBox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.TitleText {
+    margin-top: 25%;
+}

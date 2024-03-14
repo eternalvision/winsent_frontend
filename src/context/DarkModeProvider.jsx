@@ -7,7 +7,7 @@ export const DarkModeProvider = ({ children, Hooks }) => {
 
     const [theme, setTheme] = useLocalStorageState({
         key: "theme",
-        initialValue: "dark",
+        initialValue: "light",
     });
 
     return (

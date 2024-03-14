@@ -22,6 +22,10 @@ const TextFieldRender = ({ type, placeholder }) => {
 export const Authorization = () => {
     return (
         <Dialog.Content style={{ maxWidth: 450 }}>
+            <Dialog.Title>Аутентификация</Dialog.Title>
+            <Dialog.Description size="2" mb="4">
+                Чтобы продолжить, создайте или войдите в свой профиль.
+            </Dialog.Description>
             <Tabs.Root defaultValue="login" position="relative">
                 <Tabs.List>
                     <Tabs.Trigger value="login">Авторизация</Tabs.Trigger>

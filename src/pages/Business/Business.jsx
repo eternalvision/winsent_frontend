@@ -1,13 +1,23 @@
-import { Title } from "./components";
+import { Title, Introduction, Process } from "./components";
 import { Flex } from "@radix-ui/themes";
 
 import "./style.scss";
 
-export const Business = ({ AnimationWrapper }) => {
+export const Business = ({ AnimationWrapper, Authorization }) => {
     return (
         <AnimationWrapper className={"Business"} componentType={"Business"}>
-            <Flex className="FatherWidth" direction="column" align="center">
-                <Title AnimationWrapper={AnimationWrapper} />
+            <Flex
+                // style={{ gap: "95px" }}
+                className="FatherWidth"
+                direction="column"
+                gap="5"
+                align="center">
+                <Title
+                    Authorization={Authorization}
+                    AnimationWrapper={AnimationWrapper}
+                />
+                <Introduction AnimationWrapper={AnimationWrapper} />
+                <Process AnimationWrapper={AnimationWrapper} />
             </Flex>
         </AnimationWrapper>
     );

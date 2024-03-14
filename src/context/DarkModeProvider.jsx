@@ -5,7 +5,7 @@ export const DarkModeContext = createContext();
 export const DarkModeProvider = ({ children, Hooks }) => {
     const { useLocalStorageState } = Hooks;
 
-    const [theme, setTheme] = useLocalStorageState("theme", "light");
+    const [theme, setTheme] = useLocalStorageState("theme", "dark");
 
     return (
         <DarkModeContext.Provider value={{ theme, setTheme }}>

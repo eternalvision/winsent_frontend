@@ -12,6 +12,15 @@ body {
     width: 100vw;
 }
 
+body {
+    display: flex;
+    justify-content: center;
+}
+
+li {
+    list-style: none;
+}
+
 .ScrollYProgress {
     background-color: var(--accent-9);
     transform-origin: 0%;
@@ -23,6 +32,14 @@ body {
 }
 
 .FatherWidth {
-    max-width: 1300px;
+    max-width: 1440px;
     margin: 0 auto;
+    overflow: auto;
+    perspective: 1000px;
+
+    // scroll-snap-type: y mandatory;
+    // max-height: 100vh;
+    // div {
+    //     scroll-snap-align: start;
+    // }
 }

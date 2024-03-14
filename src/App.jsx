@@ -20,35 +20,29 @@ export const App = () => {
             radius="medium"
             scaling="110%">
             {/* <ThemePanel /> */}
-            <ScrollArea
-                radius="full"
-                size="3"
-                type="always"
-                scrollbars="vertical">
-                <AnimatePresence>
-                    <header className="Header">
-                        <Header
-                            {...UI}
-                            themeContext={themeContext}
-                            languageContext={languageContext}
+            <AnimatePresence>
+                <header className="Header">
+                    <Header
+                        {...UI}
+                        themeContext={themeContext}
+                        languageContext={languageContext}
+                    />
+                </header>
+            </AnimatePresence>
+            <main className="Main">
+                <AnimatePresence mode="wait">
+                    <Routes location={location} key={location.pathname}>
+                        <Route
+                            path="/business"
+                            element={<Business {...UI} />}
                         />
-                    </header>
+                        <Route
+                            path="*"
+                            element={<Navigate to={"/business"} />}
+                        />
+                    </Routes>
                 </AnimatePresence>
-                <main className="Main">
-                    <AnimatePresence mode="wait">
-                        <Routes location={location} key={location.pathname}>
-                            <Route
-                                path="/business"
-                                element={<Business {...UI} />}
-                            />
-                            <Route
-                                path="*"
-                                element={<Navigate to={"/business"} />}
-                            />
-                        </Routes>
-                    </AnimatePresence>
-                </main>
-            </ScrollArea>
+            </main>
         </Theme>
     );
 };

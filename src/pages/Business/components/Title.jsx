@@ -1,6 +1,6 @@
-import { Flex, Box, Text, Button } from "@radix-ui/themes";
+import { Flex, Box, Text, Button, Dialog } from "@radix-ui/themes";
 
-export const Title = ({ AnimationWrapper }) => {
+export const Title = ({ AnimationWrapper, Authorization }) => {
     return (
         <AnimationWrapper className={"Title"} componentType={"Component"}>
             <Flex className="TitleBlock" justify="center">
@@ -24,19 +24,28 @@ export const Title = ({ AnimationWrapper }) => {
                                     Уборка офисов домов и квартир
                                 </Text>
                             </Box>
-                            <Box className="TitleDescription">
-                                <Text color="var(--accent-color)">
-                                    Речь идет не только об уборке дома. В
-                                    комплексах многоквартирных зданий, а также в
-                                    индивидуальных жилищах, есть общественные
-                                    пространства. Именно они склонны собирать
-                                    пыль и грязь, становясь загрязненными
-                                    вследствие ежедневной активности.
-                                </Text>
-                            </Box>
                         </Flex>
+                        <Box className="TitleDescription">
+                            <Text size="3" color="var(--accent-color)">
+                                Приветствуем вас в нашей профессиональной
+                                клининговой компании! <br /> Мы активно
+                                противостоим главным врагам чистоты, таким как
+                                пыль, пылевые клещи, грязь, плесень и другие
+                                виды загрязнений. Мы осознаем вред, который они
+                                могут нанести вашему имуществу и здоровью. Не
+                                переживайте, наша задача — обеспечить вашу
+                                защиту. <br /> Откройте для себя мощь
+                                профессиональной чистки, заказав наши выдающиеся
+                                услуги прямо сейчас!
+                            </Text>
+                        </Box>
                         <Box className="TitleBoxButton">
-                            <Button size="3">Заказать уборку</Button>
+                            <Dialog.Root>
+                                <Dialog.Trigger>
+                                    <Button size="4">Заказать уборку</Button>
+                                </Dialog.Trigger>
+                                <Authorization />
+                            </Dialog.Root>
                         </Box>
                     </Flex>
                 </Box>

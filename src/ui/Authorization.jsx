@@ -1,12 +1,4 @@
-import {
-    Dialog,
-    Flex,
-    Button,
-    Text,
-    TextField,
-    Tabs,
-    IconButton,
-} from "@radix-ui/themes";
+import { Dialog, Flex, Button, Text, TextField, Tabs } from "@radix-ui/themes";
 import { Cross2Icon } from "@radix-ui/react-icons";
 
 const TextFieldRender = ({ type, placeholder }) => {
@@ -65,7 +57,6 @@ export const Authorization = () => {
                                     Отмена
                                 </Button>
                             </Dialog.Close>
-
                             <Button type="submit">Войти</Button>
                         </Flex>
                     </form>

@@ -1,3 +1,38 @@
+// .Header {
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     right: 0;
+//     z-index: 5;
+// }
+
 .HeaderBlock {
-    background-color: var(--cyan-2);
+    background-color: var(--color-page-background);
+}
+
+.st0 {
+    fill: var(--accent-9);
+}
+.st1 {
+    fill: url(#SVGID_1_);
+}
+.st2 {
+    fill: url(#SVGID_00000169533778351693643060000013992255286776614026_);
+}
+.st3 {
+    fill: url(#SVGID_00000015328842564315334580000004671761141513381305_);
+}
+
+.Logo {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    // background-color: var(--accent-a3);
+    border: 2px solid var(--accent-a3);
+    padding: 5px 10px;
+    border-radius: var(--radius-5);
+    svg {
+        width: 50px;
+        height: 50px;
+    }
 }

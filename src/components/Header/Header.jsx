@@ -7,7 +7,7 @@ export const Header = ({ AnimationWrapper, Authorization, themeContext }) => {
     return (
         <AnimationWrapper className={"HeaderBlock"} componentType={"Header"}>
             <Box className="FatherWidth">
-                <Flex justify="between" py="5" align="center" gap="9">
+                <Flex justify="between" py="3" align="center" gap="9">
                     <Box className="Logo">
                         <Logo />
                         <Flex direction="column">

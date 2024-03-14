@@ -9,7 +9,7 @@ export const Introduction = ({ AnimationWrapper, Authorization }) => {
                 <Box>
                     <img
                         className="BusinessImage"
-                        src="/public/images/window2.jpg"
+                        src="/images/window2.jpg"
                         alt=""
                     />
                 </Box>

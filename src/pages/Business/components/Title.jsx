@@ -6,7 +6,7 @@ export const Title = ({ AnimationWrapper, Authorization }) => {
             <Flex className="TitleBlock" justify="center">
                 <img
                     className="TitleImage"
-                    src="/public/images/clean1.jpg"
+                    src="/images/clean1.jpg"
                     alt="TitleImage"
                 />
                 <Box className="TitleBox">

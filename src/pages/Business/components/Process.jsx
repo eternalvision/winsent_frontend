@@ -43,7 +43,7 @@ export const Process = ({ AnimationWrapper }) => {
                 </Flex>
                 <Box className="BusinessImageBox">
                     <img
-                        src="/public/images/vacuum1.jpg"
+                        src="/images/vacuum1.jpg"
                         className="BusinessImage ProcessImage"
                         alt=""
                     />
